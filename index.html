@@ -84,6 +84,7 @@ ul.clean{margin:0;padding-left:1.1em;display:grid;gap:6px}
 ul.clean li{max-width:70ch}
 .note{font-size:13px;color:var(--mute)}
 /* lightbox */
+#lb[hidden]{display:none!important}
 #lb{position:fixed;inset:0;background:rgba(5,12,14,.94);display:flex;align-items:center;justify-content:center;z-index:50;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 #lb img{max-height:92vh;width:auto;cursor:zoom-out;border-radius:4px}
 footer{padding-block:40px;color:var(--mute);font-size:13px;border-top:1px solid var(--wall-3)}
@@ -537,7 +538,7 @@ figure figcaption{margin-top:2px}
 <footer>IP助理课 · B 场景 · 2026-11 · 所有 AI 图均为效果示意，图中人物非博主本人；布置以 3D 模型和平面图为准</footer>
 </div>
 
-<div id="lb" hidden><img loading="lazy" decoding="async" alt=""></div>
+<div id="lb" hidden><img alt=""></div>
 
 <script>
 /* 拼多多商品 ID 与列表起价，核验日期 2026-11-04（列表起价，规格价待 App 核） */
