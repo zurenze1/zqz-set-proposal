@@ -120,6 +120,38 @@ figure figcaption{margin-top:2px}
   body .wrap figure.tall figcaption{flex:1;min-width:0}
 }
 
+/* 视觉化：灯位图、图标卡、留换加 */
+.lmap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:start}
+.lmap-svg{display:block;width:100%;height:auto;background:var(--wall-2);border:1px solid var(--wall-3);border-radius:10px}
+.lmap-svg text{font-family:var(--f-body);paint-order:stroke;stroke:#1b1c23;stroke-width:3px;stroke-linejoin:round}
+.lmap-svg .t{font-size:10.5px;font-weight:700}
+.lmap-svg .d{font-size:9.5px;fill:var(--mute);font-weight:400}
+.lmap-svg .a{font-size:9px;font-family:var(--f-mono)}
+.lmap-svg .n{font-family:var(--f-mono);font-weight:700;fill:#141418;stroke:none}
+ol.lg{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14px;line-height:1.5}
+ol.lg li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;align-items:start}
+ol.lg .n{display:inline-block;min-width:26px;height:22px;padding:0 5px;border-radius:11px;background:var(--c);color:#141418;text-align:center;font:700 11px/22px var(--f-mono)}
+ol.lg .hb{color:var(--mute)}
+.t3 table{min-width:0}
+.t3 td:first-child{font-family:var(--f-mono);color:var(--cyan);white-space:nowrap}
+.wrap .mk{position:relative;width:100%}
+.wrap .mk img{width:100%;max-height:none;aspect-ratio:16/9;object-fit:cover;margin:0}
+.mk i{position:absolute;transform:translate(-50%,-50%);min-width:22px;height:22px;padding:0 4px;border-radius:11px;background:var(--c);color:#141418;font:700 11px/22px var(--f-mono);text-align:center;font-style:normal;box-shadow:0 0 0 2px rgba(10,10,14,.6);pointer-events:none}
+.icards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.icards .card{gap:6px;padding:16px 18px}
+.icards h4{margin:0;font-size:16px;font-family:var(--f-disp);display:flex;align-items:center;gap:8px}
+.icards .ico{font-size:22px;line-height:1}
+.icards p{font-size:14px;color:var(--mute)}
+.icards p b{color:var(--paper);font-weight:500}
+.icards .arr{color:var(--ember);margin:0 4px}
+.kc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.kc h3{display:flex;align-items:center;gap:8px}
+.kc .ico{font-size:22px}
+.kc li{font-size:14px;color:var(--mute)}
+.kc li b{color:var(--paper);font-weight:500}
+.facts2{margin-top:4px}
+@media (max-width:760px){.lmap{grid-template-columns:1fr}.mk i{min-width:18px;height:18px;line-height:18px;font-size:10px;border-radius:9px}}
+
 @media (prefers-reduced-motion:no-preference){img{transition:opacity .2s}}
 </style>
 
@@ -146,14 +178,15 @@ figure figcaption{margin-top:2px}
   <div class="sec-head">
     <span class="eyebrow">01 · 先研究博主</span>
     <h2>他不是美食博主，是讲职场、赚钱和 AI 的观点型口播</h2>
-    <p class="lead">“料理王”只是账号名。主页 327 条作品、约 1.4 万粉丝（2026-11-04 快照）。近期作品的标签集中在 #思考 #职场 #赚钱 #AI；点赞最高的是《为什么总有人要来公司学东西？》2.1 万。置顶合作说明写着：他只出 A-roll（出镜口播），包装交给剪辑师，对标胡泊 Hubo、秋芝2046、大师的AI小灶，“底线要求是一定要有审美”。</p>
+    <p class="lead">“料理王”只是账号名：标签集中在 #思考 #职场 #赚钱 #AI。他只出 A-roll（出镜口播），包装交给剪辑师，“底线要求是一定要有审美”。</p>
+    <div class="facts facts2"><span>作品 <b>327 条</b></span><span>粉丝 <b>约 1.4 万</b>（2026-11-04）</span><span>最高赞 <b>2.1 万</b>《为什么总有人要来公司学东西？》</span></div>
   </div>
   <div class="grid2">
     <figure class="free"><img loading="lazy" decoding="async" src="img/ev1.jpg" alt="为什么总有人要来公司学东西 全程抽帧"><figcaption>《为什么总有人要来公司学东西？》8:01，开头 / 25% / 50% / 75% / 结尾抽帧。<a href="https://www.douyin.com/video/7696224858044124426">作品链接</a></figcaption></figure>
     <figure class="free"><img loading="lazy" decoding="async" src="img/ev2.jpg" alt="审美不行 啥AI来了也白搭 全程抽帧"><figcaption>《审美不行，啥 AI 来了也白搭》5:01，同一位置、同一套光。<a href="https://www.douyin.com/video/7678408888219225398">作品链接</a></figcaption></figure>
     <figure class="free"><img loading="lazy" decoding="async" src="img/ev3.jpg" alt="AI时代如何在一个月之内搞定工作 全程抽帧"><figcaption>《AI 时代如何在一个月之内搞定工作》8:16。<a href="https://www.douyin.com/video/7700219406328040742">作品链接</a></figcaption></figure>
-    <figure class="free"><img loading="lazy" decoding="async" src="img/castle.jpg" alt="原图局部 书桌右端的乐高城堡"><figcaption><span class="tag real">老师原图局部</span> 书桌右端靠墙的大型乐高城堡，缠着花藤装饰，是他自己布置的收藏。他的视频里没出现过它，因为他一直背对它、对着门口自拍。</figcaption></figure>
-    <figure><img loading="lazy" decoding="async" src="img/ev4.jpg" alt="置顶AI讲解视频168秒处 手办展柜背景"><figcaption>置顶《为什么头部 AI 公司，集体放慢脚步？》168 秒：16:9 横屏、平视，背后是玻璃手办柜和小火龙。这是他目前最有辨识度的画面，拍摄地点就是这间书房。<a href="https://www.douyin.com/video/7689403688649067810">作品链接</a></figcaption></figure>
+    <figure class="free"><img loading="lazy" decoding="async" src="img/castle.jpg" alt="原图局部 书桌右端的乐高城堡"><figcaption><span class="tag real">老师原图局部</span> 书桌右端的大型乐高城堡，他自己布置的收藏；视频里没出现过，因为他一直对着门口自拍。</figcaption></figure>
+    <figure><img loading="lazy" decoding="async" src="img/ev4.jpg" alt="置顶AI讲解视频168秒处 手办展柜背景"><figcaption>置顶《为什么头部 AI 公司，集体放慢脚步？》168 秒：16:9 平视，背后玻璃手办柜和小火龙，最有辨识度，就在这间书房。<a href="https://www.douyin.com/video/7689403688649067810">作品链接</a></figcaption></figure>
   </div>
   <div class="tbl" style="margin-top:24px">
     <table>
@@ -206,58 +239,56 @@ figure figcaption{margin-top:2px}
     <article class="card ref">
       <img loading="lazy" decoding="async" src="img/ref_hubo2.jpg" alt="胡泊Hubo 口播画面">
       <h3>胡泊 Hubo</h3>
-      <p class="note">抖音 achg111，约 10.6 万粉丝。《自媒体必备工作台，4步搭好少做重复活》170 秒；另见<a href="https://www.douyin.com/video/7701655328349342995">《Github零基础保姆级教程》</a>。他的出镜画面平均亮度约 62/255，同片包装画面约 190，是典型暗调。</p>
-      <p class="borrow"><b>借鉴：</b>模块化金属柜放手办和造景玻璃盒，一盏暖色蘑菇台灯，墙面打冷色光。冷墙暖物，有“人住在这里”的气息。</p>
-      <p class="better"><b>更进一步：</b>借鉴他“坐在桌后、颜色靠灯打上去”的做法：人坐书桌后，身后挂深灰毛毡板，蓝紫光从柜后往上打，暖色台灯和小火龙射灯做亮点。他的画面里红、黄、蓝紫几种光同时出现，略杂；我们只留蓝紫和暖橙两种。</p>
+      <p class="note">抖音 achg111，约 10.6 万粉丝。<a href="https://www.douyin.com/video/7701655328349342995">《Github零基础保姆级教程》</a>；出镜亮度约 62/255，典型暗调。</p>
+      <p class="borrow"><b>借鉴：</b>金属柜放手办，暖色蘑菇台灯，冷色墙光：冷墙暖物。</p>
+      <p class="better"><b>更进一步：</b>他红、黄、蓝紫光同时出现略杂，我们只留蓝紫和暖橙。</p>
     </article>
     <article class="card ref">
       <img loading="lazy" decoding="async" src="img/ref_qiuzhi.jpg" alt="秋芝2046 口播画面">
       <h3>秋芝2046</h3>
       <p class="note">B 站约 110.6 万粉丝。<a href="https://www.bilibili.com/video/BV1Nd596vEyU">《全网最全！40分钟全面掌握Codex》</a>22 秒</p>
-      <p class="borrow"><b>借鉴：</b>背景压暗，只给一个主色（紫），放一个霓虹标志，人脸用柔光打亮。全片大量把口播缩成小窗叠在录屏上，缩小后依然一眼认得出人。</p>
-      <p class="better"><b>更进一步：</b>她的房间大，能靠距离虚化背景。张秋之的房间人到墙只有约 0.8 m，所以主要靠“背景比人脸暗 2–3 档”加顶部轮廓光来分层，景深只做辅助。</p>
+      <p class="borrow"><b>借鉴：</b>背景压暗只留紫色 + 霓虹标志，人脸柔光；缩成小窗也认得出。</p>
+      <p class="better"><b>更进一步：</b>人到墙仅约 0.6 m 难虚化，改靠背景暗 2–3 档 + 顶部轮廓光分层。</p>
     </article>
     <article class="card ref">
       <img loading="lazy" decoding="async" src="img/ref_dashi.jpg" alt="大师的AI小灶 口播画面">
       <h3>大师的AI小灶</h3>
       <p class="note">B 站。<a href="https://www.bilibili.com/video/BV1gsopB9ET1">《再见了AI抽卡，5分钟搞懂AI生图的底层逻辑》</a>99 秒</p>
-      <p class="borrow"><b>借鉴：</b>纯黑背景，桌面上放一块“大师的AI小灶”名牌灯箱，品牌名直接出现在画面里。口播常被裁成竖向小卡片。</p>
-      <p class="better"><b>更进一步：</b>我们在头部右上放一块火焰图形的小灯牌，呼应小火龙和“料理王”的“火”，竖屏和横屏两种裁切里都在画内。不用文字，缩成小窗也看得清。</p>
+      <p class="borrow"><b>借鉴：</b>纯黑背景，桌上品牌名牌灯箱；口播常裁成竖向小卡片。</p>
+      <p class="better"><b>更进一步：</b>头部右上放火焰图形小灯牌，呼应小火龙和“火”，竖横都在画内。</p>
     </article>
   </div>
   <div class="sec-head" style="margin-top:40px">
     <h3>画面逐项对照：他们怎么拍，我们怎么拍</h3>
-    <p class="lead">逐帧看了胡泊和秋芝的口播画面，从露出多少身体、桌子和椅背是否入镜，到光从哪来，逐项对照本方案的做法。</p>
+    <p class="lead">从露出多少身体到光从哪来，逐项对照胡泊、秋芝和本方案。</p>
   </div>
   <div class="grid3">
     <figure><img loading="lazy" decoding="async" src="img/ref_hubo2.jpg" alt="胡泊"><figcaption>胡泊 Hubo</figcaption></figure>
     <figure><img loading="lazy" decoding="async" src="img/ref_qiuzhi.jpg" alt="秋芝2046"><figcaption>秋芝2046</figcaption></figure>
     <figure><img loading="lazy" decoding="async" src="img/ai_h_V8.jpg" alt="本方案"><figcaption><span class="tag ai">本方案 · AI 效果示意</span></figcaption></figure>
   </div>
-  <div class="tbl" style="margin-top:16px"><table>
-    <thead><tr><th>看哪里</th><th>胡泊</th><th>秋芝2046</th><th>本方案</th></tr></thead>
-    <tbody>
-      <tr><td>露出身体</td><td>紧胸像：头顶留白约 5–8%，底边切在胸下</td><td>同样紧胸像，底边在胸下到上腹</td><td>胸口以上近景，底边在桌面以上</td></tr>
-      <tr><td>桌子</td><td>现场有升降桌，口播画面里完全看不到</td><td>看不到</td><td>人坐桌后，桌子不入镜</td></tr>
-      <tr><td>椅背</td><td>不入镜</td><td>肩后露出浅色椅背，在深色背景上抢眼</td><td>黑色中背椅，椅背低于肩线</td></tr>
-      <tr><td>电脑、灯具</td><td>都在画外</td><td>摄影灯在画外，远处有虚化的屏幕</td><td>都在画外</td></tr>
-      <tr><td>人物位置、视线</td><td>居中或略偏左，直视镜头</td><td>居中，直视镜头</td><td>居中略偏左，直视镜头；左右两侧都有布置</td></tr>
-      <tr><td>手势</td><td>偶尔在画面底边出现</td><td>频繁，抬到脸颊和肩膀高度</td><td>人前方和两侧留出手臂空间，手势可以进画</td></tr>
-      <tr><td>整体亮度</td><td>暗调，背景亮度约 17–42/255</td><td>暗调，背景亮度约 35–39/255</td><td><b>有意比他们亮一档</b>：背景约 55/255，人脸约 100。他不只讲 AI，还讲职场和赚钱观点，表达偏聊天，稍亮更亲近；他主要用手机拍、抖音竖屏播放，太暗在手机上会糊、噪点重；小火龙等收藏要看得清</td></tr>
-      <tr><td>背景颜色从哪来</td><td>白墙，靠柜子挡、网格控光和压曝光显暗；蓝紫环境光，左下一团红光</td><td>浓紫色光，左侧粉紫光晕</td><td>深灰毛毡板 + 蓝紫灯从柜后打，左下暖红一团</td></tr>
-      <tr><td>最亮的背景点</td><td>右肩外上方的琥珀色蘑菇台灯</td><td>右上角粉色闪电霓虹（图形，不是文字）</td><td>右肩外上方的小火龙和台灯，头部右上的火焰图形灯牌</td></tr>
-      <tr><td>窗</td><td>画面最左边一条压暗的百叶帘</td><td>看不到</td><td>窗在相机背后，整面遮光帘</td></tr>
-      <tr><td>背景距离、虚化</td><td>约 1.5–2.5 m（推断），中度虚化</td><td>约 2–3 m（推断），重度虚化</td><td>房间只有 3.3 m，人到背景约 0.6 m，虚化弱，所以靠深色毛毡板和光比来分层</td></tr>
-    </tbody>
-  </table></div>
+  <p class="note" style="margin:16px 0 10px">每张卡：对标做法 <span style="color:var(--ember)">→</span> 本方案</p>
+  <div class="icards">
+    <div class="card"><h4><span class="ico" aria-hidden="true">👤</span>露出身体</h4><p>胡泊、秋芝都是紧胸像，头顶留白约 5–8%<span class="arr">→</span><b>胸口以上，底边在桌面以上</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🗄️</span>桌子</h4><p>两位的桌子都不入镜<span class="arr">→</span><b>人坐桌后，桌子在画外</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🪑</span>椅背</h4><p>秋芝肩后浅色椅背抢眼<span class="arr">→</span><b>黑色中背椅，低于肩线</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">💻</span>电脑、灯具</h4><p>都在画外，秋芝远处有虚化屏幕<span class="arr">→</span><b>都在画外</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🎯</span>位置与视线</h4><p>居中或略偏左，直视镜头<span class="arr">→</span><b>居中略偏左，左右两侧都有布置</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">✋</span>手势</h4><p>胡泊偶尔入画，秋芝常抬到肩高<span class="arr">→</span><b>人前和两侧留出手臂空间</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🔆</span>整体亮度</h4><p>胡泊背景约 17–42、秋芝约 35–39（/255）<span class="arr">→</span><b><b>亮一档</b>：背景约 55、人脸约 100，手机竖屏不糊、收藏看得清</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🎨</span>背景颜色</h4><p>胡泊白墙 + 蓝紫光、左下红光；秋芝浓紫光<span class="arr">→</span><b>深灰毛毡板 + 柜后蓝紫光，左下一团暖红</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">⭐</span>最亮背景点</h4><p>胡泊琥珀蘑菇台灯，秋芝粉色闪电霓虹<span class="arr">→</span><b>小火龙、台灯和火焰图形灯牌</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🪟</span>窗</h4><p>胡泊画左一条压暗百叶帘<span class="arr">→</span><b>窗在相机背后，整面遮光帘</b></p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">📏</span>背景距离</h4><p>约 1.5–3 m（推断），中到重度虚化<span class="arr">→</span><b>人到背景仅约 0.6 m，靠毛毡板和光比分层</b></p></div>
+  </div>
   <div class="sec-head" style="margin-top:40px">
     <h3>胡泊现场用了哪些光，我们怎么对应</h3>
-    <p class="lead">胡泊拍摄现场的照片能看到他画面背后的整套灯光：一盏大柔光做主光、一条带网格的顶光打头发、两盏彩色灯分别打蓝和红。本方案逐项怎么对应，见 05「机位与灯光参数」表的「对应胡泊」一列。</p>
+    <p class="lead">他的现场：大柔光主光、带网格顶光、蓝红两盏彩灯。逐项对应见 05 灯位图图例。</p>
   </div>
   <figure class="free"><img loading="lazy" decoding="async" src="img/ref_hubo_bts.jpg" alt="胡泊拍摄现场"><figcaption><span class="tag real">胡泊拍摄现场</span> 右前方大型深口抛物线柔光箱做主光，头顶带网格的条形柔光做顶光，左侧圆形柔光和蓝色小灯管，椅子后方红光；房间本身是普通办公室。</figcaption></figure>
   <div class="sec-head" style="margin-top:40px">
     <h3>从胡泊看得到的一角，反推他整间屋子</h3>
-    <p class="lead">他的画面只露出身后一块，而且是虚化的。所以我们从画面里的线索倒推画面外的布置，再把张秋之这间房画面外的部分也设计好。左列是画面里看得到的事实，右列是据此做的推断。</p>
+    <p class="lead">他只露出身后虚化的一块。左列是画面里的线索，右列是据此推断的画面外布置。</p>
   </div>
   <div class="tbl"><table>
     <thead><tr><th>画面里的线索</th><th>推断画面外是什么</th></tr></thead>
@@ -300,7 +331,7 @@ figure figcaption{margin-top:2px}
     <div class="card">
       <h3>为什么这样排</h3>
       <ul class="clean">
-        <li><b>桌后坐，桌子不入镜：</b>参照胡泊和秋芝，人坐在桌后，镜头只拍胸口以上，观众看不到桌子；桌子平时就是办公桌，不用在两个位置之间切换。</li>
+        <li><b>桌后坐，桌子不入镜：</b>参照胡泊和秋芝只拍胸口以上；桌子平时就是办公桌。</li>
         <li><b>衣柜移到书桌墙：</b>原来的位置在相机和灯后面，每次拿东西都要挪灯。</li>
         <li><b>相机在窗前：</b>距人约 1.8 m，比之前远，中长焦更好压缩背景。</li>
         <li><b>通道：</b>桌子两端各留约 0.5 m，从门口直接走到座位。</li>
@@ -312,36 +343,57 @@ figure figcaption{margin-top:2px}
     <h3 style="font-size:clamp(22px,2.6vw,28px)">照着摆就能拍</h3>
     <p class="lead">距离、高度来自按尺寸搭的 3D 模型，到场用卷尺复测；功率是起调值，以监看画面为准。</p>
   </div>
-  <div class="tbl"><table>
-    <thead><tr><th>项目</th><th>位置</th><th>参数</th><th>原因</th><th>对应胡泊</th></tr></thead>
+  <div class="lmap">
+    <figure class="free"><div><svg class="lmap-svg" viewBox="0 0 480 322" role="img" aria-label="灯位俯视示意：人物、相机、主光、辅光、顶光、背景光的位置、距离和角度" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g8"><stop offset="0" stop-color="#9b8cff" stop-opacity=".55"/><stop offset="1" stop-color="#9b8cff" stop-opacity="0"/></radialGradient><radialGradient id="g9"><stop offset="0" stop-color="#ff5d5d" stop-opacity=".5"/><stop offset="1" stop-color="#ff5d5d" stop-opacity="0"/></radialGradient></defs><rect x="35" y="30" width="330" height="230" fill="#1b1c23" stroke="#4a4a5c" stroke-width="2"/><path d="M275,260 V310 H365 V260" fill="#1b1c23" stroke="#4a4a5c" stroke-width="2"/><text x="320" y="292" text-anchor="middle" class="d">入口</text><text x="200" y="22" text-anchor="middle" class="d">书房 330 × 230 cm · 俯视</text><line x1="35" y1="45" x2="35" y2="245" stroke="#8fa6ff" stroke-width="4" stroke-dasharray="6 4"/><rect x="361" y="30" width="4" height="230" fill="#3a3a48"/><rect x="330" y="45" width="31" height="80" rx="2" fill="#2b2b37" stroke="#4a4a5c"/><rect x="330" y="180" width="31" height="70" rx="2" fill="#2b2b37" stroke="#4a4a5c"/><ellipse cx="352" cy="40" rx="26" ry="20" fill="url(#g9)"/><ellipse cx="352" cy="150" rx="30" ry="34" fill="url(#g8)"/><rect x="196" y="91" width="70" height="120" rx="3" fill="#3a2e28" stroke="#5a4636"/><text x="214" y="200" text-anchor="middle" class="d">书桌</text><line x1="110" y1="151" x2="297" y2="151" stroke="#4de0c0" stroke-width="1.4" stroke-dasharray="5 4"/><path d="M214.2,73.8 L285.0,163.0 L309.0,139.0 L219.8,68.2Z" fill="#ffd166" opacity=".16"/><line x1="217" y1="71" x2="297" y2="151" stroke="#ffd166" stroke-width="1" stroke-dasharray="3 3" opacity=".8"/><path d="M178.0,224.5 L303.0,161.4 L291.0,140.6 L174.0,217.5Z" fill="#ff9ecb" opacity=".16"/><line x1="176" y1="221" x2="297" y2="151" stroke="#ff9ecb" stroke-width="1" stroke-dasharray="3 3" opacity=".8"/><rect x="309" y="98" width="12" height="104" rx="3" fill="#6ec6ff" opacity=".22" stroke="#6ec6ff" stroke-dasharray="3 2"/><path d="M257,151 A40,40 0 0,1 268.7,122.7" fill="none" stroke="#ffd166" stroke-width="1.2"/><text x="242" y="137" class="a" fill="#ffd166">45°</text><path d="M267,151 A30,30 0 0,0 271,166" fill="none" stroke="#ff9ecb" stroke-width="1.2"/><text x="236" y="166" class="a" fill="#ff9ecb">30°</text><text x="200" y="146" text-anchor="middle" class="a" fill="#4de0c0">1.8 m</text><g><circle cx="297" cy="151" r="11" fill="#ece6dc" stroke="#15161b" stroke-width="2"/><text x="297" y="154.2" text-anchor="middle" class="n" font-size="9">1</text></g><g><circle cx="110" cy="151" r="9" fill="#4de0c0" stroke="#15161b" stroke-width="2"/><text x="110" y="154.2" text-anchor="middle" class="n" font-size="9">2</text></g><g><circle cx="217" cy="71" r="9" fill="#ffd166" stroke="#15161b" stroke-width="2"/><text x="217" y="74.2" text-anchor="middle" class="n" font-size="9">3</text></g><g><circle cx="316" cy="80" r="9" fill="#6ec6ff" stroke="#15161b" stroke-width="2"/><text x="316" y="83.2" text-anchor="middle" class="n" font-size="9">4</text></g><g><circle cx="176" cy="221" r="9" fill="#ff9ecb" stroke="#15161b" stroke-width="2"/><text x="176" y="224.2" text-anchor="middle" class="n" font-size="9">5</text></g><g><circle cx="345" cy="215" r="8" fill="#ff8a3d" stroke="#15161b" stroke-width="2"/><text x="345" y="218.2" text-anchor="middle" class="n" font-size="9">6</text></g><g><circle cx="345" cy="85" r="8" fill="#ff8a3d" stroke="#15161b" stroke-width="2"/><text x="345" y="88.2" text-anchor="middle" class="n" font-size="9">7</text></g><g><circle cx="352" cy="150" r="8" fill="#9b8cff" stroke="#15161b" stroke-width="2"/><text x="352" y="153.2" text-anchor="middle" class="n" font-size="9">8</text></g><g><circle cx="352" cy="40" r="8" fill="#ff5d5d" stroke="#15161b" stroke-width="2"/><text x="352" y="43.2" text-anchor="middle" class="n" font-size="9">9</text></g><g><circle cx="363" cy="177" r="8" fill="#ff8a3d" stroke="#15161b" stroke-width="2"/><text x="363" y="180.2" text-anchor="middle" class="n" font-size="8">10</text></g><g><circle cx="35" cy="228" r="8" fill="#8fa6ff" stroke="#15161b" stroke-width="2"/><text x="35" y="231.2" text-anchor="middle" class="n" font-size="8">17</text></g><text x="297" y="220" text-anchor="middle" class="t" fill="#ece6dc">人物</text><text x="297" y="232" text-anchor="middle" class="d">背距墙 0.6 m</text><text x="110" y="174" text-anchor="middle" class="t" fill="#4de0c0">相机</text><text x="110" y="186" text-anchor="middle" class="d">高 1.2 m · 平视</text><text x="205" y="52" text-anchor="end" class="t" fill="#ffd166">主光</text><text x="205" y="64" text-anchor="end" class="d">距人约 1 m · 前左 45°</text><text x="205" y="76" text-anchor="end" class="d">高 1.7 m · 俯 20°</text><text x="300" y="48" text-anchor="middle" class="t" fill="#6ec6ff">顶光</text><text x="300" y="60" text-anchor="middle" class="d">头顶偏后 · 高 2.3 m</text><text x="176" y="242" text-anchor="middle" class="t" fill="#ff9ecb">辅光</text><text x="176" y="254" text-anchor="middle" class="d">距人 1.4 m · 高 1.4 m</text><text x="48" y="232" text-anchor="start" class="t" fill="#8fa6ff">窗 · 遮光帘</text><text x="374" y="43" class="t" fill="#ff5d5d">暖红角光<tspan class="d" dx="4">城堡柜后</tspan></text><text x="374" y="88" class="t" fill="#ff8a3d">低柜 + 城堡<tspan class="d" dx="4">小射灯</tspan></text><text x="374" y="153" class="t" fill="#9b8cff">蓝紫背景光<tspan class="d" dx="4">柜后向上</tspan></text><text x="374" y="180" class="t" fill="#ff8a3d">火焰灯牌<tspan class="d" dx="4">高 1.4 m</tspan></text><text x="374" y="218" class="t" fill="#ff8a3d">展示柜<tspan class="d" dx="4">小火龙 · 台灯</tspan></text></svg></div><figcaption><span class="tag">灯位俯视示意</span> 按 3D 模型尺寸绘制，编号与 07 平面图一致。</figcaption></figure>
+    <ol class="lg">
+      <li><span class="n" style="--c:#ece6dc">1</span><span><b>人物</b> 坐桌后，桌子不入镜 · <span class="hb">胡泊：同样桌后坐</span></span></li>
+      <li><span class="n" style="--c:#4de0c0">2</span><span><b>相机</b> 中长焦压缩背景 · <span class="hb">胡泊：平视近景，人偏左</span></span></li>
+      <li><span class="n" style="--c:#ffd166">3</span><span><b>主光</b> 大而柔，抬高避镜片反光 · <span class="hb">胡泊：大深抛 + 网格</span></span></li>
+      <li><span class="n" style="--c:#6ec6ff">4</span><span><b>顶光</b> 勾出发丝肩线，脱离暗背景 · <span class="hb">胡泊：头顶条形网格灯</span></span></li>
+      <li><span class="n" style="--c:#ff9ecb">5</span><span><b>辅光</b> 光比 1:3–1:4，比反光板好控 · <span class="hb">胡泊：圆形网格柔光</span></span></li>
+      <li><span class="n" style="--c:#ff8a3d">6·7</span><span><b>收藏点光</b> 几个暖点引导视线 · <span class="hb">胡泊：琥珀台灯、柜内小灯</span></span></li>
+      <li><span class="n" style="--c:#9b8cff">8</span><span><b>蓝紫背景光</b> 毛毡板下亮上暗 · <span class="hb">胡泊：蓝色灯管打墙</span></span></li>
+      <li><span class="n" style="--c:#ff5d5d">9</span><span><b>暖红角光</b> 冷背景里一团暖 · <span class="hb">胡泊：椅后红粉光</span></span></li>
+      <li><span class="n" style="--c:#ff8a3d">10</span><span><b>火焰灯牌</b> 竖横都在画内的品牌符号 · <span class="hb">胡泊：无</span></span></li>
+      <li><span class="n" style="--c:#8fa6ff">17</span><span><b>窗与顶灯</b> 只用人造光，颜色稳定 · <span class="hb">胡泊：百叶帘放下、顶灯关</span></span></li>
+    </ol>
+  </div>
+  <div class="tbl t3" style="margin-top:20px"><table>
+    <thead><tr><th>编号</th><th>器材</th><th>关键参数</th></tr></thead>
     <tbody>
-      <tr><td>座位与书桌</td><td>书桌 120×70 cm 放房间中部；人坐桌后，背对收藏墙约 0.6 m（编号 1、11）</td><td>中背办公椅，无头枕；桌子只在画外，供手臂放松和日常办公</td><td>观众只看到胸口以上，桌子平时办公。</td><td>坐在桌后，桌子不入镜。</td></tr>
-      <tr><td>横屏机位（主）</td><td>窗前，正对人物，距人约 1.8 m（编号 2）</td><td>镜头高约 1.2 m 平视；手机约 2 倍（约 48–52 mm 等效）或相机 50 mm、f/2–2.8；胸口以上近景，画面底边在桌面以上，人略偏左</td><td>中长焦压缩背景，小房间也有虚化。</td><td>平视近景，人偏左，柜子在右。</td></tr>
-      <tr><td>竖屏机位</td><td>同一位置，换竖拍</td><td>手机约 3 倍（约 70 mm 等效），胸口以上，人居中</td><td>他的思考类日更是竖屏。</td><td>—</td></tr>
-      <tr><td>拍摄设置</td><td>—</td><td>4K 25/30 帧，快门 1/50，ISO 尽量低，白平衡锁 4300K，曝光以脸为准</td><td>锁定后每条颜色一致。</td><td>暗调，出镜亮度约 62/255。</td></tr>
-      <tr><td>主光</td><td>人物前左约 45°，书桌左前角外，灯头高约 1.7 m，向下约 20°（编号 3）</td><td>200W 双色温 COB + 90 cm 深口抛物线柔光箱 + 网格；5000K，30–50% 起调</td><td>大而柔，网格防溢光，抬高避开镜片反光。</td><td>右前方大深抛 + 网格。</td></tr>
-      <tr><td>辅光</td><td>相机右侧，离人约 1.4 m，灯头高约 1.4 m（编号 5）</td><td>60W COB + 60 cm 深口柔光箱 + 网格；约主光 1/4 亮度</td><td>用灯比反光板好控，光比 1:3–1:4。</td><td>左前方圆形网格柔光。</td></tr>
-      <tr><td>顶光（轮廓）</td><td>右上角灯架加横杆，伸到人物头顶偏后，高约 2.3 m（编号 4）</td><td>60W COB + 30×120 条形柔光箱 + 网格；3800K，20–30% 起调</td><td>勾出头发和肩线，和暗背景分开。</td><td>头顶条形网格灯。</td></tr>
-      <tr><td>蓝紫背景光</td><td>右侧展示柜后面地上，贴墙向上（编号 8）</td><td>RGB 棒灯，蓝紫色，20–30%；城堡射灯调到最低档，柜门选深色</td><td>灯打在毛毡板上，下亮上暗。</td><td>左后方蓝色灯管打墙。</td></tr>
-      <tr><td>暖红角光</td><td>城堡低柜后面地上（编号 9）</td><td>RGB 管灯，红橙色，10–15%</td><td>冷背景里加一团暖色。</td><td>椅子后墙上的红粉光。</td></tr>
-      <tr><td>收藏点光</td><td>小火龙、城堡各一盏小射灯；展示柜灯带；柜顶蘑菇台灯（编号 6、7）</td><td>2700K 暖光；小火龙是背景里最亮的暖点</td><td>几个暖点引导视线。</td><td>头后琥珀色台灯、柜内小灯。</td></tr>
-      <tr><td>火焰霓虹灯牌</td><td>头部右侧，挂在毛毡板上，高约 1.4 m、与头顶齐平（编号 10）</td><td>约 30 cm 宽，暖橙</td><td>固定的品牌符号，竖横都在画内。</td><td>—</td></tr>
-      <tr><td>顶灯、窗</td><td>天花筒灯；窗（编号 17）</td><td>拍摄时筒灯关、遮光帘拉严</td><td>只用人造光。</td><td>百叶帘放下，顶灯关。</td></tr>
+      <tr><td>1</td><td>座位与书桌</td><td>书桌 120×70 cm 放房间中部；无头枕中背椅，背对收藏墙约 0.6 m；桌子在画外</td></tr>
+      <tr><td>2</td><td>横屏机位（主）</td><td>窗前距人约 1.8 m，镜头高约 1.2 m 平视；手机约 2 倍（48–52 mm 等效）或 50 mm f/2–2.8；胸口以上，人略偏左</td></tr>
+      <tr><td>2</td><td>竖屏机位</td><td>同一位置换竖拍；手机约 3 倍（约 70 mm 等效），人居中</td></tr>
+      <tr><td>—</td><td>拍摄设置</td><td>4K 25/30 帧，快门 1/50，ISO 尽量低，白平衡锁 4300K，曝光以脸为准</td></tr>
+      <tr><td>3</td><td>主光</td><td>200W 双色温 COB + 90 cm 深口抛物线柔光箱 + 网格；5000K，30–50% 起调；书桌左前角外，灯头高约 1.7 m、向下约 20°</td></tr>
+      <tr><td>4</td><td>顶光（轮廓）</td><td>60W COB + 30×120 条形柔光箱 + 网格；3800K，20–30%；右上角灯架加横杆伸到头顶偏后，高约 2.3 m</td></tr>
+      <tr><td>5</td><td>辅光</td><td>60W COB + 60 cm 深口柔光箱 + 网格；约主光 1/4；相机右侧，离人约 1.4 m，高约 1.4 m</td></tr>
+      <tr><td>6 · 7</td><td>收藏点光</td><td>小火龙、城堡各一盏小射灯 + 展示柜灯带 + 柜顶蘑菇台灯；2700K，小火龙最亮</td></tr>
+      <tr><td>8</td><td>蓝紫背景光</td><td>RGB 棒灯，蓝紫 20–30%，展示柜后贴墙向上；城堡射灯最低档，柜门选深色</td></tr>
+      <tr><td>9</td><td>暖红角光</td><td>RGB 管灯，红橙 10–15%，城堡低柜后地上</td></tr>
+      <tr><td>10</td><td>火焰霓虹灯牌</td><td>约 30 cm 宽，暖橙；挂毛毡板，高约 1.4 m、与头顶齐平</td></tr>
+      <tr><td>17</td><td>顶灯、窗</td><td>拍摄时天花筒灯关、遮光帘拉严</td></tr>
     </tbody>
   </table></div>
 
   <figure class="tall" style="margin-top:20px"><img loading="lazy" decoding="async" src="img/ai_v_V8.jpg" alt="竖屏9比16 口播画面 上半身到腰 AI效果示意"><figcaption><span class="tag ai">AI 效果示意 · 9:16 竖屏</span> 上半身到腰、手势入画</figcaption></figure>
   <div class="grid2" style="margin-top:20px">
       <figure><img loading="lazy" decoding="async" src="img/ai_cam_V8.jpg" alt="横屏机位 AI效果示意"><figcaption><span class="tag ai">AI 效果示意 · 16:9 机位画面</span> 胸口以上近景，桌子在画外；左侧城堡、右侧展示柜，灯牌在头部右侧、与头顶齐平。</figcaption></figure>
-      <figure><img loading="lazy" decoding="async" src="img/ai_bts_V8.jpg" alt="幕后 AI效果示意"><figcaption><span class="tag ai">AI 效果示意 · 幕后</span> 主光在人物前左，辅光在相机右侧，顶光横杆在头顶。</figcaption></figure>
+      <figure><div class="mk"><img loading="lazy" decoding="async" src="img/ai_bts_V8.jpg" alt="幕后 AI效果示意，带灯位编号"><i style="left:57%;top:58%;--c:#ece6dc">1</i><i style="left:23%;top:79%;--c:#4de0c0">2</i><i style="left:24%;top:30%;--c:#ffd166">3</i><i style="left:57%;top:5%;--c:#6ec6ff">4</i><i style="left:77%;top:69%;--c:#ff9ecb">5</i><i style="left:80%;top:38%;--c:#ff8a3d">6</i><i style="left:46%;top:43%;--c:#ff8a3d">7</i><i style="left:70%;top:44%;--c:#9b8cff">8</i><i style="left:47%;top:59%;--c:#ff5d5d">9</i><i style="left:68%;top:26%;--c:#ff8a3d">10</i></div><figcaption><span class="tag ai">AI 效果示意 · 幕后</span> 编号同灯位图；4 号顶光在画面上方外。</figcaption></figure>
   </div>
 </section>
 
 <section id="light">
-  <div class="sec-head" style="margin-bottom:0">
+  <div class="sec-head">
     <span class="eyebrow">06 · 灯光</span>
     <h2>五盏摄影灯 + 实景灯，对齐胡泊的配置</h2>
-    <p class="lead">原则：人脸最亮，背景约暗一档，冷色只用蓝紫、暖色只用火焰橙红；每盏灯的位置、参数和对应胡泊的哪盏灯见 05 表。</p>
+    <p class="lead">每盏灯的位置和参数见 05 灯位图。</p>
+  </div>
+  <div class="icards">
+    <div class="card"><h4><span class="ico" aria-hidden="true">💡</span>人脸最亮</h4><p>主光从前左打亮脸，辅光只压阴影，不抢主光。</p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🌒</span>背景暗一档</h4><p>毛毡板吸光，顶光把人从暗背景里勾出来。</p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🎨</span>只用两种颜色</h4><p>冷色只用蓝紫，暖色只用火焰橙红。</p></div>
+    <div class="card"><h4><span class="ico" aria-hidden="true">🚫</span>只用人造光</h4><p>关筒灯、拉严遮光帘，每条视频颜色一致。</p></div>
   </div>
 </section>
 
@@ -349,7 +401,7 @@ figure figcaption{margin-top:2px}
   <div class="sec-head">
     <span class="eyebrow">07 · 房间每个位置</span>
     <h2>镜头里拍什么，镜头外放什么</h2>
-    <p class="lead">一张平面图标出房间里每样东西的位置，再按区域逐个看。平面图是按尺寸搭的 3D 模型，区域图是在它基础上做的 AI 效果示意，处于拍摄状态：遮光帘拉上，只开人造光。图中人物为示意，非本人。</p>
+    <p class="lead">平面图（3D 模型）标出每样东西的位置，再按区域看。区域图为拍摄状态的 AI 效果示意，人物非本人。</p>
   </div>
   <div class="zone">
     <figure class="plan"><img loading="lazy" decoding="async" src="img/plan_labeled.jpg" alt="带编号平面图"><figcaption><span class="tag">3D 模型 · 平面俯视</span> 紫线为镜头视线。</figcaption></figure>
@@ -399,7 +451,7 @@ figure figcaption{margin-top:2px}
   <div class="sec-head">
     <span class="eyebrow">08 · 视频里好看，现场也好看</span>
     <h2>比胡泊多做一步：房间本身也要好看</h2>
-    <p class="lead">胡泊的现场照片显示：他的画面质感来自灯光和镜头，房间本身是普通办公室，墙是白的，灯架、线缆、杂物铺满地面。我们要视频里有同样的质感，现场也整齐。</p>
+    <p class="lead">胡泊的质感来自灯光和镜头，现场却是白墙办公室、灯架线缆铺满地面。我们画面同样好看，现场也整齐。</p>
   </div>
   <div class="grid2">
     <div class="card"><h3>现场怎么收拾</h3>
@@ -410,7 +462,7 @@ figure figcaption{margin-top:2px}
       </ul></div>
     <div class="card"><h3>出镜穿什么</h3>
       <ul class="clean">
-        <li>纯色上衣，两种思路都行：像秋芝穿深藏青、深炭灰，和背景同色系，靠脸部亮度突出；或像胡泊穿浅燕麦灰针织衫，和紫色背景拉开反差。</li>
+        <li>纯色上衣：深藏青、深炭灰（像秋芝，同色系），或浅燕麦灰针织（像胡泊，拉开反差）。</li>
         <li>避免纯白和高亮色：暗调画面里会比脸还亮，观众视线会落到衣服上。</li>
         <li>避免大面积图案和 logo，缩成小窗时会变成噪点。</li>
         <li>他视频里常穿浅灰、带图案的 T 恤，这条建议需要和他本人沟通。</li>
@@ -432,44 +484,22 @@ figure figcaption{margin-top:2px}
         <li><b>办公时：</b>黑色显示器装在支架臂上，拉到正前方做主屏；iMac 固定在桌子左端，侧向他。</li>
         <li><b>拍摄时：</b>显示器推到桌子右端外侧，两块屏熄屏，都在画外。胡泊拍摄时电脑也不入镜。</li>
         <li><b>走线：</b>主机放桌下右侧，线走桌下理线架，沿地毯边到墙脚插座。</li>
-        <li><b>舒适度：</b>书桌在房间中间，人背后是收藏墙，左右两端各有约 0.5 m，进出和转身都不挤。</li>
+        <li><b>舒适度：</b>桌子两端各约 0.5 m，进出转身不挤。</li>
       </ul>
     </div>
   </div>
-  <div class="tbl"><table>
-    <thead><tr><th>物品</th><th>处理</th><th>原因</th></tr></thead>
-    <tbody>
-      <tr class="sub"><td colspan="3">硬装（不动）</td></tr>
-      <tr><td>墙体、门、窗框、空调出风口</td><td>保留</td><td>不动硬装；空调口和门洞都在画外。</td></tr>
-      <tr><td>右墙（白墙）</td><td>不刷，挂深灰毛毡吸音板</td><td>胡泊的墙也是白的，颜色靠灯。但这里人离墙只有约 0.6 m，白墙会被主光照灰；毛毡板吸光、吸回声、可拆，租房也能用。</td></tr>
-      <tr><td>红棕人字拼木地板</td><td>保留，加地毯</td><td>暖色木地板和暖色台灯同色；地毯压住地板反光，也减少回声。</td></tr>
-      <tr><td>天花筒灯</td><td>保留，拍摄时关</td><td>日常照明要用；拍摄时开着会从头顶直射，眼窝发黑。</td></tr>
-      <tr class="sub"><td colspan="3">窗与光</td></tr>
-      <tr><td>原咖色窗帘</td><td>换整面全遮光帘</td><td>衣柜移走后窗户整面露出，一副遮光率 ≥99% 的深灰落地帘就能拉严。自然光会随时间和天气变化，同一条视频前后不一致。</td></tr>
-      <tr class="sub"><td colspan="3">家具</td></tr>
-      <tr><td>白色衣柜</td><td>保留，移到书桌墙左段</td><td>原位置在相机和灯后面，每次拿东西都要挪灯；移到书桌墙后柜门朝房间开，不挡任何设备，也不再挡窗。</td></tr>
-      <tr><td>衣柜顶的堆放物</td><td>收进 3 个统一收纳箱</td><td>幕后角度会拍到；统一白箱和衣柜同色。</td></tr>
-      <tr><td>330 cm 长书桌</td><td>换成 120×70 cm 书桌，放房间中部</td><td>这张桌子既是办公桌又是拍摄桌；长桌占满一面墙，放不下衣柜，也没法当前景桌。</td></tr>
-      <tr><td>黑色人体工学办公椅</td><td>换无头枕中背办公椅</td><td>高头枕会从人物头后冒出来；中背椅久坐舒服，也不挡背景。旧椅如头枕可拆可以继续用。</td></tr>
-      <tr><td>两块圆形白地毯</td><td>换一块深色地毯</td><td>圆毯图案杂；一块地毯划出书桌区，转椅滑动更稳。</td></tr>
-      <tr><td>黑色移动推车</td><td>保留，放衣柜旁</td><td>常用小物有用；原位置在背景墙前会入镜。</td></tr>
-      <tr class="sub"><td colspan="3">设备与收藏</td></tr>
-      <tr><td>黑色显示器、iMac</td><td>保留，上新书桌</td><td>办公和录屏要用；摆法见上方。</td></tr>
-      <tr><td>桌面杂物</td><td>清走</td><td>桌子在画外，但幕后角度会拍到，保持整洁。</td></tr>
-      <tr><td>小火龙手办</td><td>保留，画面焦点</td><td>置顶视频里出现过，最有辨识度；放在头部高度、右肩外侧。</td></tr>
-      <tr><td>乐高城堡</td><td>保留，移到左侧低柜</td><td>老师原图里的现有收藏，0 元。</td></tr>
-      <tr><td>手办、乐高小件、复古摄影机模型</td><td>保留，进展示柜</td><td>置顶视频背景里就有这类收藏。</td></tr>
-      <tr><td>书</td><td>保留一部分，放展示柜底层</td><td>体现“读东西的人”，书脊颜色统一，避免抢小火龙。</td></tr>
-      <tr><td>毛绒公仔等其他小物</td><td>收进柜子</td><td>和“AI 观点博主”的定位不一致。</td></tr>
-    </tbody>
-  </table></div>
+  <div class="kc">
+    <div class="card"><h3><span class="ico" aria-hidden="true">✅</span>留</h3><ul class="clean"><li><b>墙、门、窗框、空调口</b>：不动硬装，都在画外</li><li><b>红棕人字拼地板</b>：和暖色台灯同调，加地毯压反光</li><li><b>天花筒灯</b>：日常照明用，拍摄时关</li><li><b>白色衣柜</b>：移到书桌墙左段，不再挡灯挡窗</li><li><b>黑色推车</b>：放衣柜旁，不入镜</li><li><b>显示器、iMac</b>：上新书桌，摆法见上</li><li><b>小火龙</b>：画面焦点，头部高度、右肩外</li><li><b>乐高城堡</b>：移到左侧低柜，0 元</li><li><b>手办、乐高小件、摄影机模型</b>：进展示柜</li><li><b>书</b>：留一部分放柜底层，书脊统一</li></ul></div>
+    <div class="card"><h3><span class="ico" aria-hidden="true">🔄</span>换</h3><ul class="clean"><li><b>咖色窗帘 → 全遮光帘</b>：≥99% 深灰落地；日光会变，前后不一致</li><li><b>330 cm 长桌 → 120×70 cm 书桌</b>：办公拍摄两用，腾出衣柜位</li><li><b>人体工学椅 → 无头枕中背椅</b>：头枕会冒出头后；可拆就继续用</li><li><b>两块圆白地毯 → 一块深色地毯</b>：图案不杂，转椅更稳</li><li><b>桌面杂物 → 清走</b>：幕后角度会拍到</li><li><b>毛绒公仔等 → 收进柜子</b>：不合“AI 观点博主”定位</li></ul></div>
+    <div class="card"><h3><span class="ico" aria-hidden="true">➕</span>加</h3><ul class="clean"><li><b>深灰毛毡板（右墙，不刷墙）</b>：人离墙 0.6 m，白墙会被照灰；吸音、可拆，租房可用</li><li><b>3 个白色收纳箱</b>：收起衣柜顶堆放物，和衣柜同色</li><li><b>灯、展示柜、低柜等</b>：见 10 采购清单</li></ul></div>
+  </div>
 </section>
 
 <section id="list">
   <div class="sec-head">
     <span class="eyebrow">10 · 采购清单与预算</span>
     <h2>预计总额</h2>
-    <p class="lead">编号与效果图对应。相机、麦克风按要求另算，不在下表。价格为拼多多列表起价（2026-11-04），书桌、窗帘、地毯等按尺寸定价的物品已按规格预留，下单前逐项核实。</p>
+    <p class="lead">相机、麦克风另算。价格为拼多多列表起价（2026-11-04），按尺寸定价的已预留，下单前逐项核实。</p>
   </div>
   <div class="budget card" id="budget"></div>
   <div class="tbl" style="margin-top:20px"><table id="items">
@@ -477,8 +507,8 @@ figure figcaption{margin-top:2px}
     <tbody></tbody>
   </table></div>
   <div class="grid2" style="margin-top:20px">
-    <div class="card"><h3>先买什么</h3><p>主光、辅光、顶光、遮光帘、新书桌先到位，用现有收藏就能先拍出八成效果；背景灯、展示柜可后补。</p></div>
-    <div class="card"><h3>预算砍半时保留什么</h3><p>保留主光、辅光、顶光和遮光帘；书桌用旧长桌截短或二手桌，展示柜改用现有家具，背景灯先用一盏。灯光决定画面质感，家具可以后补。</p></div>
+    <div class="card"><h3>先买什么</h3><p>主光、辅光、顶光、遮光帘、新书桌先到位，就能拍出八成效果；背景灯、展示柜后补。</p></div>
+    <div class="card"><h3>预算砍半时保留什么</h3><p>保留主光、辅光、顶光和遮光帘；书桌用旧桌截短或二手，柜子用现有家具，背景灯先一盏。</p></div>
   </div>
 </section>
 
@@ -561,22 +591,22 @@ window.B_ITEMS=[
 
 <script>
 const DECISIONS=[
-  ["证据：4 条样本全部坐着口播、单人一条过；他只负责出 A-roll；胡泊也是坐在桌后口播。","决定：书桌放房间中部，既是办公桌也是拍摄桌；灯和相机常驻，拍摄时只把显示器推开。","作用：坐下就能拍，不用在两个位置之间切换；每条画面一致，日更不靠临时收拾。"],
-  ["证据：小火龙和手办柜出现在他的置顶视频里（168 秒）；乐高城堡出现在老师原图的书桌右端，视频里没拍到过。","决定：右墙做收藏墙。右边金属展示柜放手办和小火龙，小火龙在头部高度、右肩外侧；左边低柜放城堡，只在横屏出现。","作用：观众记住“背后有只小火龙的 AI 博主”。两样都是他已有的东西，0 元，比买装饰更像他。"],
-  ["证据：胡泊和秋芝的画面都是暗调，颜色靠彩色灯打出来，人脸是全画面最亮的地方；口播常被缩成小窗。","决定：人物身后挂深灰毛毡板；蓝紫光从柜后往上打，暖色只留给小火龙、台灯、灯带；人头后留空。","作用：背景比人脸暗 2–3 档，缩成小卡片也认得出；冷暖对比让小火龙跳出来；剪辑师在头部一侧有地方叠字。"],
-  ["证据：现在只有顶灯，人和背景混在一起；他戴眼镜、黑发。","决定：五盏摄影灯对齐胡泊：深抛网格主光、网格辅光、头顶条形顶光、蓝紫和暖红两盏背景光；关掉顶灯，只留实景暖灯。","作用：暗调、有立体感，接近对标博主的影棚质感；网格防止主光把深墙打灰。"],
-  ["证据：思考类是 3:4 竖屏，AI 讲解是 16:9 横屏。","决定：机位平视、距人约 1.8 m；横屏竖屏都只拍胸口以上，看不到桌子；小火龙、火焰灯牌放在两种裁切的交集里。","作用：一个机位两种画幅，不用为横屏另搭一套。"]
+  ["证据：4 条样本都是坐着单人口播；他只出 A-roll；胡泊也坐桌后。","决定：书桌放房间中部，办公拍摄两用；灯和相机常驻，拍时推开显示器。","作用：坐下就能拍，每条画面一致，日更不靠临时收拾。"],
+  ["证据：小火龙和手办柜在置顶视频 168 秒出现；乐高城堡只在老师原图里。","决定：右墙做收藏墙：右柜放小火龙（头部高度、右肩外），左低柜放城堡。","作用：观众记住“背后有只小火龙的 AI 博主”；都是现有收藏，0 元。"],
+  ["证据：对标都是暗调，颜色靠灯，人脸最亮；口播常缩成小窗。","决定：身后深灰毛毡板，蓝紫光柜后上打，暖色只给收藏，头后留空。","作用：背景暗 2–3 档，小窗也认得出；头部一侧可叠字。"],
+  ["证据：现在只有顶灯，人和背景混在一起；他戴眼镜、黑发。","决定：五盏灯对齐胡泊（主、辅、顶、蓝紫、暖红），关顶灯，留实景暖灯。","作用：暗调有立体感；网格防止主光把深墙打灰。"],
+  ["证据：思考类 3:4 竖屏，AI 讲解 16:9 横屏。","决定：平视、距人约 1.8 m，两种画幅都只拍胸口以上；记忆点放在裁切交集里。","作用：一个机位两种画幅，不用另搭一套。"]
 ];
 document.getElementById('decisions').innerHTML=DECISIONS.map((d,i)=>`<div><div class="num">决定 ${i+1}</div><div class="chain"><div><span class="k">内容证据</span>${d[0].replace('证据：','')}</div><div><span class="k">设计决定</span>${d[1].replace('决定：','')}</div><div><span class="k">作用</span>${d[2].replace('作用：','')}</div></div></div>`).join('');
 
 const STEPS=[
-  ["1 · 按尺寸搭 3D 模型","用 Blender 按老师原图标注的 330 / 230 / 60 / 240 / 90 / 50 cm 搭出房间，改造前后共用一个模型，所有角度家具位置一致。","img/wm_before_V1.jpg"],
-  ["2 · 初版布置","把收藏墙、灯位、人物和机位放进模型，渲染竖屏、横屏、平面、幕后多个角度。","img/wm_after_V1.jpg"],
-  ["3 · 问题与修改：通道","平面图发现初版落地绿植挡住入口门洞一半、办公椅占了机位。修改：绿植移到低柜上，办公椅推回书桌前。","img/wm_after_V7.jpg"],
-  ["4 · 问题与修改：人物","第一次图生图时，白模里的方块人物被误读成玻璃罩和镜子。修改：把人物白模做成人形，图生图强度调到 0.42。","img/ai_fail.jpg"],
-  ["5 · 问题与修改：光","人物成立后，画面整体太亮，像白天的家居照，和对标的暗调影棚差距大。修改：背景压暗、蓝紫光从柜后打、主光加网格、关环境光、换深色上衣。","img/ai_v1_bright.jpg"],
-  ["6 · 问题与修改：布局","人坐在空地中间，衣柜在相机后面要挪灯才能拿东西，书桌挤在衣柜旁。修改：参照胡泊改为桌前口播，书桌即拍摄桌，衣柜移到书桌墙，不刷墙改挂毛毡板，辅光换成真灯。","img/room_V8_ai.jpg"],
-  ["7 · 定稿","桌后坐、中等亮度、胸口以上近景，桌子在画外，头顶只留约 7%。人物对焦清晰、边缘自然，城堡按他的乐高迪士尼城堡重做，灯牌和小火龙降到头部高度。","img/ai_h_V8.jpg"]
+  ["1 · 按尺寸搭 3D 模型","Blender 按原图 330/230/60/240/90/50 cm 搭房间，前后共用一个模型。","img/wm_before_V1.jpg"],
+  ["2 · 初版布置","放入收藏墙、灯位、人物和机位，渲染竖屏、横屏、平面、幕后。","img/wm_after_V1.jpg"],
+  ["3 · 问题与修改：通道","绿植挡住半个门洞、椅子占了机位。改：绿植上低柜，椅子推回桌前。","img/wm_after_V7.jpg"],
+  ["4 · 问题与修改：人物","方块人物被误读成玻璃罩和镜子。改：白模做成人形，强度 0.42。","img/ai_fail.jpg"],
+  ["5 · 问题与修改：光","太亮像白天家居照。改：压暗背景、柜后蓝紫光、主光加网格、换深色上衣。","img/ai_v1_bright.jpg"],
+  ["6 · 问题与修改：布局","衣柜在相机后要挪灯。改：桌前口播，衣柜移书桌墙，挂毛毡板，辅光换真灯。","img/room_V8_ai.jpg"],
+  ["7 · 定稿","胸口以上、头顶留约 7%；城堡按他的乐高迪士尼城堡重做，小火龙、灯牌降到头部高度。","img/ai_h_V8.jpg"]
 ];
 document.getElementById('steps').innerHTML=STEPS.map(s=>`<div class="card"><img loading="lazy" decoding="async" src="${s[2]}" alt="${s[0]}"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
 
