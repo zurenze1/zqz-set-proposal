@@ -332,8 +332,8 @@ figure figcaption{margin-top:2px}
 
   <figure class="tall" style="margin-top:20px"><img loading="lazy" decoding="async" src="img/ai_v_V8.jpg" alt="竖屏9比16 口播画面 上半身到腰 AI效果示意"><figcaption><span class="tag ai">AI 效果示意 · 9:16 竖屏</span> 上半身到腰、手势入画</figcaption></figure>
   <div class="grid2" style="margin-top:20px">
-      <figure><img loading="lazy" decoding="async" src="img/wm_after_V4b_V7.jpg" alt="横屏机位 3D 模型"><figcaption><span class="tag">3D 模型 · 16:9 机位画面</span> 胸口以上近景，桌子在画外；左侧城堡、右侧展示柜，灯牌在头部右侧、与头顶齐平。</figcaption></figure>
-      <figure><img loading="lazy" decoding="async" src="img/wm_after_V8_V7.jpg" alt="幕后侧面 3D 模型"><figcaption><span class="tag">3D 模型 · 幕后</span> 主光在人物前左，辅光在相机右侧，顶光横杆在头顶。</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="img/ai_cam_V8.jpg" alt="横屏机位 AI效果示意"><figcaption><span class="tag ai">AI 效果示意 · 16:9 机位画面</span> 胸口以上近景，桌子在画外；左侧城堡、右侧展示柜，灯牌在头部右侧、与头顶齐平。</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="img/ai_bts_V8.jpg" alt="幕后 AI效果示意"><figcaption><span class="tag ai">AI 效果示意 · 幕后</span> 主光在人物前左，辅光在相机右侧，顶光横杆在头顶。</figcaption></figure>
   </div>
 </section>
 
@@ -575,7 +575,7 @@ const STEPS=[
   ["3 · 问题与修改：通道","平面图发现初版落地绿植挡住入口门洞一半、办公椅占了机位。修改：绿植移到低柜上，办公椅推回书桌前。","img/wm_after_V7.jpg"],
   ["4 · 问题与修改：人物","第一次图生图时，白模里的方块人物被误读成玻璃罩和镜子。修改：把人物白模做成人形，图生图强度调到 0.42。","img/ai_fail.jpg"],
   ["5 · 问题与修改：光","人物成立后，画面整体太亮，像白天的家居照，和对标的暗调影棚差距大。修改：背景压暗、蓝紫光从柜后打、主光加网格、关环境光、换深色上衣。","img/ai_v1_bright.jpg"],
-  ["6 · 问题与修改：布局","人坐在空地中间，衣柜在相机后面要挪灯才能拿东西，书桌挤在衣柜旁。修改：参照胡泊改为桌前口播，书桌即拍摄桌，衣柜移到书桌墙，不刷墙改挂毛毡板，辅光换成真灯。","img/wm_after_V7.jpg"],
+  ["6 · 问题与修改：布局","人坐在空地中间，衣柜在相机后面要挪灯才能拿东西，书桌挤在衣柜旁。修改：参照胡泊改为桌前口播，书桌即拍摄桌，衣柜移到书桌墙，不刷墙改挂毛毡板，辅光换成真灯。","img/room_V8_ai.jpg"],
   ["7 · 定稿","桌后坐、中等亮度、胸口以上近景，桌子在画外，头顶只留约 7%。人物对焦清晰、边缘自然，城堡按他的乐高迪士尼城堡重做，灯牌和小火龙降到头部高度。","img/ai_h_V8.jpg"]
 ];
 document.getElementById('steps').innerHTML=STEPS.map(s=>`<div class="card"><img loading="lazy" decoding="async" src="${s[2]}" alt="${s[0]}"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
